@@ -12,11 +12,13 @@
 		E4A8C1E31AF2617800AA82A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A8C1E11AF2617800AA82A9 /* Main.storyboard */; };
 		E4A8C1E51AF2617800AA82A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A8C1E41AF2617800AA82A9 /* Images.xcassets */; };
 		E4A8C1F41AF2617800AA82A9 /* iGitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8C1F31AF2617800AA82A9 /* iGitTests.swift */; };
-		E4A8C1FF1AF2625100AA82A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8C1FE1AF2625100AA82A9 /* User.swift */; };
 		E4A8C2011AF262C600AA82A9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8C2001AF262C600AA82A9 /* Login.swift */; };
 		E4A8C2041AF2640000AA82A9 /* UserSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8C2031AF2640000AA82A9 /* UserSearch.swift */; };
 		E4A8C23B1AF2796C00AA82A9 /* RepoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8C23A1AF2796C00AA82A9 /* RepoSearch.swift */; };
 		E4A8C23D1AF27C0200AA82A9 /* MackSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8C23C1AF27C0200AA82A9 /* MackSearch.swift */; };
+		E4D2B6DA1AF2CA3F00107206 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6D91AF2CA3F00107206 /* User.swift */; };
+		E4D2B6DC1AF2CA3F00107206 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DB1AF2CA3F00107206 /* Label.swift */; };
+		E4D2B6DE1AF2CA3F00107206 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DD1AF2CA3F00107206 /* Repo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +41,13 @@
 		E4A8C1ED1AF2617800AA82A9 /* iGitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iGitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A8C1F21AF2617800AA82A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A8C1F31AF2617800AA82A9 /* iGitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iGitTests.swift; sourceTree = "<group>"; };
-		E4A8C1FE1AF2625100AA82A9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E4A8C2001AF262C600AA82A9 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E4A8C2031AF2640000AA82A9 /* UserSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearch.swift; sourceTree = "<group>"; };
 		E4A8C23A1AF2796C00AA82A9 /* RepoSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSearch.swift; sourceTree = "<group>"; };
 		E4A8C23C1AF27C0200AA82A9 /* MackSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MackSearch.swift; sourceTree = "<group>"; };
+		E4D2B6D91AF2CA3F00107206 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E4D2B6DB1AF2CA3F00107206 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		E4D2B6DD1AF2CA3F00107206 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,9 @@
 		E4A8C1FD1AF261C700AA82A9 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				E4A8C1FE1AF2625100AA82A9 /* User.swift */,
+				E4D2B6DD1AF2CA3F00107206 /* Repo.swift */,
+				E4D2B6DB1AF2CA3F00107206 /* Label.swift */,
+				E4D2B6D91AF2CA3F00107206 /* User.swift */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -242,10 +248,12 @@
 				E4A8C1DE1AF2617800AA82A9 /* iGit.xcdatamodeld in Sources */,
 				E4A8C2041AF2640000AA82A9 /* UserSearch.swift in Sources */,
 				E4A8C23D1AF27C0200AA82A9 /* MackSearch.swift in Sources */,
+				E4D2B6DE1AF2CA3F00107206 /* Repo.swift in Sources */,
 				E4A8C1DB1AF2617800AA82A9 /* AppDelegate.swift in Sources */,
 				E4A8C23B1AF2796C00AA82A9 /* RepoSearch.swift in Sources */,
-				E4A8C1FF1AF2625100AA82A9 /* User.swift in Sources */,
 				E4A8C2011AF262C600AA82A9 /* Login.swift in Sources */,
+				E4D2B6DC1AF2CA3F00107206 /* Label.swift in Sources */,
+				E4D2B6DA1AF2CA3F00107206 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +441,7 @@
 				E4A8C1F91AF2617800AA82A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4A8C1FA1AF2617800AA82A9 /* Build configuration list for PBXNativeTarget "iGitTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +450,7 @@
 				E4A8C1FC1AF2617800AA82A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

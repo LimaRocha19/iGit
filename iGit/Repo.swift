@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Repo.swift
 //  iGit
 //
 //  Created by Isaías Lima on 30/04/15.
@@ -9,11 +9,11 @@
 import Foundation
 import CoreData
 
-class User: NSManagedObject {
+class Repo: NSManagedObject {
 
     @NSManaged var nome: String
-    @NSManaged var senha: String
-    @NSManaged var avatar: NSData
-    @NSManaged var repos: NSSet
+    @NSManaged var commit: NSDate
+    @NSManaged var labels: NSSet
+    @NSManaged var user: User
 
 }
