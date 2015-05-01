@@ -17,6 +17,9 @@ class ReposMobile: UITableViewController {
     var user: User!
     var mackSearch: MackSearch!
     
+    var pullSearch: PullSearch!
+    var pullDetail: PullDetail!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +31,22 @@ class ReposMobile: UITableViewController {
         user = result.objectAtIndex(0) as! User
         
         mackSearch = MackSearch.sharedInstance
+        pullDetail = PullDetail.sharedInstance
+        pullSearch = PullSearch.sharedInstance
         
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: "segue", name: "pullRequest", object: nil)
+        notificationCenter.addObserver(self, selector: "perform", name: "label", object: nil)
+        
+    }
+    
+    func segue() {
+        let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
+        pullDetail.labelPull(user, repo: mackSearch.mackRepos.objectAtIndex(indexPath.row) as! String, pullNumber: pullSearch.pullNumber)
+    }
+    
+    func perform() {
+        self.performSegueWithIdentifier("label", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,9 +82,9 @@ class ReposMobile: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var transfer = Transfer.sharedInstance
-        transfer.user = self.user
-        transfer.repo = mackSearch.mackRepos.objectAtIndex(indexPath.row) as! String
+
+        pullSearch.pullGitHub(user, repo: mackSearch.mackRepos.objectAtIndex(indexPath.row) as! String)
+        
     }
 
     /*

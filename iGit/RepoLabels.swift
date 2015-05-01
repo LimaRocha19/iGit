@@ -11,29 +11,13 @@ import CoreData
 
 class RepoLabels: UITableViewController {
     
-    var repo: String!
-    var user: User!
-    
     var pullSearch: PullSearch!
     var pullDetail: PullDetail!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pullSearch = PullSearch.sharedInstance
         pullDetail = PullDetail.sharedInstance
-        
-        var transfer = Transfer.sharedInstance
-        self.user = transfer.user
-        self.repo = transfer.repo
-        
-        pullSearch.pullGitHub(user, repo: repo)
-        
-        sleep(5)
-        
-        pullDetail.labelPull(user, repo: repo, pullNumber: pullSearch.pullNumber)
-        
-        sleep(5)
         
     }
 

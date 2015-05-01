@@ -63,6 +63,8 @@ class PullDetail: NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegate
     func connectionDidFinishLoading(connection: NSURLConnection) {
         pull = NSJSONSerialization.JSONObjectWithData(json, options: .MutableContainers, error: nil) as! NSDictionary
         labels = pull.objectForKey("labels") as! NSMutableArray
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.postNotificationName("label", object: self)
     }
     
 }

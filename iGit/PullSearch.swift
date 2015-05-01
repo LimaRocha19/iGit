@@ -74,6 +74,8 @@ class PullSearch:  NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegat
                 var pullRequest = pullRequests[j].objectForKey("user") as! NSMutableDictionary!
                 if pullRequest.objectForKey("login") as! String == usuario.nome {
                     pullNumber = pullRequests[j].objectForKey("number") as! Int
+                    let notificationCenter = NSNotificationCenter.defaultCenter()
+                    notificationCenter.postNotificationName("pullRequest", object: self)
                 }
                 
             }

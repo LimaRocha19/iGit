@@ -158,9 +158,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="bFY-sA-2mV" kind="show" id="x3Y-L4-OJT"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -169,6 +166,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="Gpo-Lq-ojQ"/>
+                    <connections>
+                        <segue destination="bFY-sA-2mV" kind="show" identifier="label" id="Sjg-wO-Ofv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9O-CE-ks4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

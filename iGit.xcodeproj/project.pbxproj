@@ -24,7 +24,6 @@
 		E4D2B6E71AF3C23A00107206 /* ReposMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6E61AF3C23A00107206 /* ReposMobile.swift */; };
 		E4D2B6E91AF3CE1200107206 /* Isaac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B6E81AF3CE1200107206 /* Isaac.storyboard */; };
 		E4D2B6EB1AF4043300107206 /* RepoLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6EA1AF4043300107206 /* RepoLabels.swift */; };
-		E4D2B6ED1AF40BEC00107206 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6EC1AF40BEC00107206 /* Transfer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 		E4D2B6E61AF3C23A00107206 /* ReposMobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposMobile.swift; sourceTree = "<group>"; };
 		E4D2B6E81AF3CE1200107206 /* Isaac.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Isaac.storyboard; sourceTree = "<group>"; };
 		E4D2B6EA1AF4043300107206 /* RepoLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoLabels.swift; sourceTree = "<group>"; };
-		E4D2B6EC1AF40BEC00107206 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 				E4A8C1DC1AF2617800AA82A9 /* iGit.xcdatamodeld */,
 				E4A8C1D81AF2617800AA82A9 /* Supporting Files */,
 				E4D2B6E81AF3CE1200107206 /* Isaac.storyboard */,
-				E4D2B6EC1AF40BEC00107206 /* Transfer.swift */,
 			);
 			path = iGit;
 			sourceTree = "<group>";
@@ -280,7 +277,6 @@
 				E4A8C1DB1AF2617800AA82A9 /* AppDelegate.swift in Sources */,
 				E4A8C23B1AF2796C00AA82A9 /* RepoSearch.swift in Sources */,
 				E4D2B6E01AF3ACB500107206 /* PullSearch.swift in Sources */,
-				E4D2B6ED1AF40BEC00107206 /* Transfer.swift in Sources */,
 				E4A8C2011AF262C600AA82A9 /* Login.swift in Sources */,
 				E4D2B6E71AF3C23A00107206 /* ReposMobile.swift in Sources */,
 				E4D2B6DC1AF2CA3F00107206 /* Label.swift in Sources */,
