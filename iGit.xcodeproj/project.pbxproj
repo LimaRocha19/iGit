@@ -21,6 +21,8 @@
 		E4D2B6DE1AF2CA3F00107206 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DD1AF2CA3F00107206 /* Repo.swift */; };
 		E4D2B6E01AF3ACB500107206 /* PullSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DF1AF3ACB500107206 /* PullSearch.swift */; };
 		E4D2B6E21AF3BC1100107206 /* PullDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6E11AF3BC1100107206 /* PullDetail.swift */; };
+		E4D2B6E71AF3C23A00107206 /* ReposMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6E61AF3C23A00107206 /* ReposMobile.swift */; };
+		E4D2B6E91AF3CE1200107206 /* Isaac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D2B6E81AF3CE1200107206 /* Isaac.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		E4D2B6DD1AF2CA3F00107206 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		E4D2B6DF1AF3ACB500107206 /* PullSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullSearch.swift; sourceTree = "<group>"; };
 		E4D2B6E11AF3BC1100107206 /* PullDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullDetail.swift; sourceTree = "<group>"; };
+		E4D2B6E61AF3C23A00107206 /* ReposMobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposMobile.swift; sourceTree = "<group>"; };
+		E4D2B6E81AF3CE1200107206 /* Isaac.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Isaac.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		E4A8C1D71AF2617800AA82A9 /* iGit */ = {
 			isa = PBXGroup;
 			children = (
+				E4D2B6E31AF3BF7100107206 /* ViewControllers */,
 				E4A8C2021AF263DE00AA82A9 /* Connection */,
 				E4A8C1FD1AF261C700AA82A9 /* Entidades */,
 				E4A8C1DA1AF2617800AA82A9 /* AppDelegate.swift */,
@@ -100,7 +105,7 @@
 				E4A8C1E41AF2617800AA82A9 /* Images.xcassets */,
 				E4A8C1DC1AF2617800AA82A9 /* iGit.xcdatamodeld */,
 				E4A8C1D81AF2617800AA82A9 /* Supporting Files */,
-				E4A8C2001AF262C600AA82A9 /* Login.swift */,
+				E4D2B6E81AF3CE1200107206 /* Isaac.storyboard */,
 			);
 			path = iGit;
 			sourceTree = "<group>";
@@ -150,6 +155,15 @@
 				E4D2B6E11AF3BC1100107206 /* PullDetail.swift */,
 			);
 			name = Connection;
+			sourceTree = "<group>";
+		};
+		E4D2B6E31AF3BF7100107206 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4A8C2001AF262C600AA82A9 /* Login.swift */,
+				E4D2B6E61AF3C23A00107206 /* ReposMobile.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 			files = (
 				E4A8C1E31AF2617800AA82A9 /* Main.storyboard in Resources */,
 				E4A8C1E51AF2617800AA82A9 /* Images.xcassets in Resources */,
+				E4D2B6E91AF3CE1200107206 /* Isaac.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +275,7 @@
 				E4A8C23B1AF2796C00AA82A9 /* RepoSearch.swift in Sources */,
 				E4D2B6E01AF3ACB500107206 /* PullSearch.swift in Sources */,
 				E4A8C2011AF262C600AA82A9 /* Login.swift in Sources */,
+				E4D2B6E71AF3C23A00107206 /* ReposMobile.swift in Sources */,
 				E4D2B6DC1AF2CA3F00107206 /* Label.swift in Sources */,
 				E4D2B6DA1AF2CA3F00107206 /* User.swift in Sources */,
 			);

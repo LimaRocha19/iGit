@@ -47,12 +47,18 @@ class Login: UIViewController {
     }
     
     func enter() {
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        let usuario = user
+        notificationCenter.postNotificationName("user", object: self, userInfo:["usuario" : usuario])
+        
         self.performSegueWithIdentifier("login", sender: self)
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
 
+        super.viewDidLoad()
+        
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: "enter", name: "gitHubUser", object: nil)
         
@@ -63,6 +69,8 @@ class Login: UIViewController {
             context!.save(nil)
         } else {
             user = result.objectAtIndex(0) as! User
+            nick.text = user.nome
+            pass.text = user.senha
             userSearch.gitHubUser(user)
         }
         

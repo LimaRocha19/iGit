@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Isaac", bundle: nil)
+        
+        let reposController = storyBoard.instantiateViewControllerWithIdentifier("Repos") as! ReposMobile
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(reposController, selector: "Usuario:", name: "user", object: nil)
+        
+        
+        
         return true
     }
 
