@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class Login: UIViewController {
+class Login: UIViewController, UITextFieldDelegate {
     
     var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -17,18 +17,25 @@ class Login: UIViewController {
     @IBOutlet var logo: UIImageView!
     @IBOutlet var nick: UITextField!
     @IBOutlet var pass: UITextField!
+    @IBOutlet var button: UIButton!
     
     var userSearch: UserSearch!
+    var mackSearch: MackSearch!
+    var repoSearch: RepoSearch!
     var user: User!
     var result: NSArray!
     
     @IBAction func login(sender: AnyObject) {
-        user = result.objectAtIndex(0) as! User
         user.nome = nick.text
         user.senha = pass.text
         context!.save(nil)
         
         userSearch.gitHubUser(user)
+        repoSearch.reposGitHub(user)
+    }
+    
+    func mack() {
+        mackSearch.repoGitHub(user)
     }
 
     func memoriaCheia() -> Bool {
@@ -48,21 +55,32 @@ class Login: UIViewController {
     
     func enter() {
         
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        let usuario = user
-        notificationCenter.postNotificationName("user", object: self, userInfo:["usuario" : usuario])
-        
         self.performSegueWithIdentifier("login", sender: self)
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        textField.becomeFirstResponder()
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
         
+        button.layer.cornerRadius = 5
+        
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: "enter", name: "gitHubUser", object: nil)
+        notificationCenter.addObserver(self, selector: "mack", name: "reposFull", object: nil)
         
         userSearch = UserSearch.sharedInstance
+        mackSearch = MackSearch.sharedInstance
+        repoSearch = RepoSearch.sharedInstance
+        
+
         
         if self.memoriaCheia() == false {
             user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context!) as! User
@@ -72,6 +90,8 @@ class Login: UIViewController {
             nick.text = user.nome
             pass.text = user.senha
             userSearch.gitHubUser(user)
+            repoSearch.reposGitHub(user)
+            button.enabled = false
         }
         
     }

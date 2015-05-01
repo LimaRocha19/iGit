@@ -82,6 +82,9 @@ class MackSearch: NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegate
         
         if i < repoSearch.repos.count {
             self.repoGitHub(usuario)
+        } else {
+            let notificationCenter = NSNotificationCenter.defaultCenter()
+            notificationCenter.postNotificationName("gitHubUser", object: self)
         }
     }
     

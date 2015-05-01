@@ -57,9 +57,7 @@ class UserSearch: NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegate
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
         gitHubUser = NSJSONSerialization.JSONObjectWithData(json, options: .MutableContainers, error: nil) as! NSDictionary
-        
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.postNotificationName("gitHubUser", object: self)
+
     }
     
 }

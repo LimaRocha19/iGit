@@ -12,19 +12,12 @@ import CoreData
 class ReposMobile: UITableViewController {
 
     var user: User!
+    var mackSearch: MackSearch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    func Usuario(mensagem: NSNotification) {
-        
-        let info: Dictionary<String,User> = mensagem.userInfo as! Dictionary<String,User>
-        
-        let usuario: User = info["usuario"]!
-        
-        user = usuario
+        mackSearch = MackSearch.sharedInstance
         
     }
 
@@ -38,24 +31,28 @@ class ReposMobile: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Mack Mobile repos"
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return mackSearch.mackRepos.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("repo", forIndexPath: indexPath) as! UITableViewCell
 
-        // Configure the cell...
+        cell.textLabel?.text = mackSearch.mackRepos.objectAtIndex(indexPath.row) as? String
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -26,6 +26,7 @@ class RepoSearch: NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegate
     }
     
     private override init() {
+        repos = NSMutableArray()
         super.init()
     }
     
@@ -66,6 +67,9 @@ class RepoSearch: NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegate
             repos.addObject(url)
             
         }
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.postNotificationName("reposFull", object: self)
         
     }
     
