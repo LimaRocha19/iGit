@@ -20,6 +20,7 @@
 		E4D2B6DC1AF2CA3F00107206 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DB1AF2CA3F00107206 /* Label.swift */; };
 		E4D2B6DE1AF2CA3F00107206 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DD1AF2CA3F00107206 /* Repo.swift */; };
 		E4D2B6E01AF3ACB500107206 /* PullSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6DF1AF3ACB500107206 /* PullSearch.swift */; };
+		E4D2B6E21AF3BC1100107206 /* PullDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2B6E11AF3BC1100107206 /* PullDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		E4D2B6DB1AF2CA3F00107206 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		E4D2B6DD1AF2CA3F00107206 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		E4D2B6DF1AF3ACB500107206 /* PullSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullSearch.swift; sourceTree = "<group>"; };
+		E4D2B6E11AF3BC1100107206 /* PullDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				E4A8C23A1AF2796C00AA82A9 /* RepoSearch.swift */,
 				E4A8C23C1AF27C0200AA82A9 /* MackSearch.swift */,
 				E4D2B6DF1AF3ACB500107206 /* PullSearch.swift */,
+				E4D2B6E11AF3BC1100107206 /* PullDetail.swift */,
 			);
 			name = Connection;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				E4A8C1DE1AF2617800AA82A9 /* iGit.xcdatamodeld in Sources */,
 				E4A8C2041AF2640000AA82A9 /* UserSearch.swift in Sources */,
 				E4A8C23D1AF27C0200AA82A9 /* MackSearch.swift in Sources */,
+				E4D2B6E21AF3BC1100107206 /* PullDetail.swift in Sources */,
 				E4D2B6DE1AF2CA3F00107206 /* Repo.swift in Sources */,
 				E4A8C1DB1AF2617800AA82A9 /* AppDelegate.swift in Sources */,
 				E4A8C23B1AF2796C00AA82A9 /* RepoSearch.swift in Sources */,
