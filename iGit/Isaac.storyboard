@@ -134,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="720" y="321"/>
         </scene>
-        <!--Repos-->
+        <!--Tasks-->
         <scene sceneID="wPG-YR-As4">
             <objects>
                 <tableViewController storyboardIdentifier="Repos" id="yAq-Hz-LOq" customClass="ReposMobile" customModule="iGit" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,6 +158,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bFY-sA-2mV" kind="show" id="x3Y-L4-OJT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -165,11 +168,47 @@
                             <outlet property="delegate" destination="yAq-Hz-LOq" id="w3e-zi-U7Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Repos" id="Gpo-Lq-ojQ"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="Gpo-Lq-ojQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9O-CE-ks4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1605" y="321"/>
+        </scene>
+        <!--Repo Labels-->
+        <scene sceneID="zcX-1b-05w">
+            <objects>
+                <tableViewController id="bFY-sA-2mV" customClass="RepoLabels" customModule="iGit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="st2-xE-fPe">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="label" textLabel="rDx-3T-hfw" style="IBUITableViewCellStyleDefault" id="NGL-Ua-GhQ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGL-Ua-GhQ" id="APC-lA-LfN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rDx-3T-hfw">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bFY-sA-2mV" id="pxM-9G-51P"/>
+                            <outlet property="delegate" destination="bFY-sA-2mV" id="DZn-bH-SFG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHr-cI-51N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ryb-DG-7LY">

@@ -1,5 +1,5 @@
 //
-//  ReposMobile.swift
+//  RepoLabels.swift
 //  iGit
 //
 //  Created by Isaías Lima on 01/05/15.
@@ -9,25 +9,31 @@
 import UIKit
 import CoreData
 
-class ReposMobile: UITableViewController {
+class RepoLabels: UITableViewController {
     
-    var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-    let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-
+    var repo: String!
     var user: User!
-    var mackSearch: MackSearch!
     
+    var pullSearch: PullSearch!
+    var pullDetail: PullDetail!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var request = NSFetchRequest(entityName: "User")
-        request.returnsObjectsAsFaults = false
+        pullSearch = PullSearch.sharedInstance
+        pullDetail = PullDetail.sharedInstance
         
-        var result: NSArray = context!.executeFetchRequest(request, error: nil)!
+        var transfer = Transfer.sharedInstance
+        self.user = transfer.user
+        self.repo = transfer.repo
         
-        user = result.objectAtIndex(0) as! User
+        pullSearch.pullGitHub(user, repo: repo)
         
-        mackSearch = MackSearch.sharedInstance
+        sleep(5)
+        
+        pullDetail.labelPull(user, repo: repo, pullNumber: pullSearch.pullNumber)
+        
+        sleep(5)
         
     }
 
@@ -43,31 +49,24 @@ class ReposMobile: UITableViewController {
         // Return the number of sections.
         return 1
     }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Mack Mobile repos"
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return mackSearch.mackRepos.count
+        return self.pullDetail.labels.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("repo", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("label", forIndexPath: indexPath) as! UITableViewCell
 
-        cell.textLabel?.text = mackSearch.mackRepos.objectAtIndex(indexPath.row) as? String
+        let label = pullDetail.labels.objectAtIndex(indexPath.row) as! NSDictionary
+        
+        cell.textLabel?.text = label.valueForKey("name") as? String
 
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var transfer = Transfer.sharedInstance
-        transfer.user = self.user
-        transfer.repo = mackSearch.mackRepos.objectAtIndex(indexPath.row) as! String
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -104,7 +103,14 @@ class ReposMobile: UITableViewController {
     }
     */
 
-    
-    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
